@@ -155,7 +155,7 @@ I created a `zsh-theme` file, which provide different features and change appear
 
 # Screenshots
 
-TODO
+![Showing features](https://raw.githubusercontent.com/se-jaeger/my-zsh/master/screenshots/hunter_screenshot.png)
 
 # Further tooling
 
