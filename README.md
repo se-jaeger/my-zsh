@@ -90,6 +90,10 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 
 - iTerm2 -> Preferences -> tab "Appearance" -> Theme -> slect "Dark"
 
+### Increase scroll buffer
+
+- iTerm2 -> Preferences -> tab "Terminal" -> tick "Unlimited scrollback"
+
 
 ## 3. Install zsh plugins
 
