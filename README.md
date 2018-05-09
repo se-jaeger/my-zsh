@@ -70,8 +70,8 @@ Or use brew: `brew cask install iterm2`
 
 I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 
-1. Download the `itermcolors` file. You can use the following command to automatically store it in your `oh-my-zsh` installation path, or use a custom one.
-    - `curl https://raw.githubusercontent.com/se-jaeger/hunter-zsh-scheme/master/hunter.itermcolors > ~/.oh-my-zsh/hunter.itermcolors`
+1. Download the `itermcolors` file. You can use the following command to automatically store it in your `oh-my-zsh` installation path, subdir `custom`, or use a custom one.
+    - `curl https://raw.githubusercontent.com/se-jaeger/hunter-zsh-scheme/master/hunter.itermcolors > ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/hunter.itermcolors`
     - https://github.com/se-jaeger/hunter-zsh-scheme/blob/master/hunter.itermcolors
 2. Import `hunter.itermcolors` (or whatever you named it) into iTerm2
     - iTerm2 -> Preferences -> tab "Profiles" -> select <your-profile-name> -> tab "Colors" -> Color Presets... -> Import... -> choose the `hunter.itermcolors` file
@@ -147,8 +147,8 @@ plugins(
 
 I created a `zsh-theme` file, which provide different features and change appearance, see [Click](https://github.com/se-jaeger/hunter-zsh-scheme).
 
-1. Download the `zsh-theme` file. You can use the following command to automatically store it in your `~/.oh-my-zsh/themes` directory, or download it yourself.
-    - `curl https://raw.githubusercontent.com/se-jaeger/hunter-zsh-scheme/master/hunter.zsh-theme > ~/.oh-my-zsh/themes/hunter.zsh-theme`
+1. Download the `zsh-theme` file. You can use the following command to automatically store it in the `themes` dir of your installation directory, or download it yourself.
+    - `curl https://raw.githubusercontent.com/se-jaeger/hunter-zsh-scheme/master/hunter.zsh-theme > ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/hunter.zsh-theme`
     - https://github.com/se-jaeger/hunter-zsh-scheme/blob/master/hunter.zsh-theme
 2. Activate the theme in `~/.zshrc` file: `ZSH_THEME="hunter"` (or whatever you named it)
 
