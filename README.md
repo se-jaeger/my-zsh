@@ -141,7 +141,7 @@ plugins(
   # other plugins
 
   # should be last plugin loaded
-  zsh-history-substring-search
+  history-substring-search
 )
 ```
 (Source: https://github.com/zsh-users/zsh-history-substring-search#install)
