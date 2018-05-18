@@ -102,7 +102,7 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 > It suggests commands as you type, based on command history.
 >> (Source: https://github.com/zsh-users/zsh-autosuggestions#zsh-autosuggestions)
 
-1. Run `git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions`
+1. Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 2. Change your `~/.zshrc` file and add `zsh-autosuggestions` to the plugins like:
 ```
 plugins(
