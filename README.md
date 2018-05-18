@@ -128,6 +128,22 @@ plugins(
 ```
 (Source: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 
+### Install zsh plugin: zsh-completions
+
+> This projects aims at gathering/developing new completion scripts that are not available in Zsh yet. The scripts may be contributed to the Zsh project when stable enough.
+>> (Source: https://github.com/zsh-users/zsh-completions)
+
+1. Run `git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions`
+2. Change your `~/.zshrc` file and add `zsh-completions` to the the plugins like:
+```
+plugins(
+  # other plugins
+  zsh-completions
+)
+```
+3. Add `autoload -U compinit && compinit -i` to your `~/.zshrc` file. **BE CAREFUL: `-i` skips the security check!**
+(Source: https://github.com/zsh-users/zsh-completions#using-zsh-frameworks)
+
 
 ### Install zsh plugin: zsh-history-substring-search
 
