@@ -198,6 +198,14 @@ Easy install via brew: `brew install trash`
 Easy install via brew: `brew install tree`
 
 
+### tldr
+
+> Simplified and community-driven man pages.
+>> (Source: http://tldr.sh)
+
+Easy install via brew: `brew install tldr`
+
+
 ## useful alias
 
 A collection of different alias I'm using.
