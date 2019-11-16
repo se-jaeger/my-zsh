@@ -90,7 +90,7 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 
 ### Change iTerm2 scheme
 
-- iTerm2 -> Preferences -> tab "Appearance" -> Theme -> slect "Dark"
+- iTerm2 -> Preferences -> tab "Profiles" -> tab "Appearance" -> Theme -> slect "Dark"
 
 ### Increase scroll buffer
 
