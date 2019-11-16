@@ -45,7 +45,9 @@ It also comes with a lot of `themes` and `plugins`.
 To activate changes you can restart iTerm2, if you did some changes on them, or reload the zsh config file: `source ~/.zshrc`
 
 
-### Zsh
+### Zsh - Deprecated
+
+Zsh is the default shell since macOS 10.15
 
 The easiest way to install Zsh is using [brew](https://brew.sh).  
 Therefore run: `brew install zsh`
