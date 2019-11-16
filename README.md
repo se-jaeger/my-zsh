@@ -143,8 +143,6 @@ plugins(
   zsh-completions
 )
 ```
-3. Add `autoload -U compinit && compinit -i` to your `~/.zshrc` file. **BE CAREFUL: `-i` skips the security check!**
-(Source: https://github.com/zsh-users/zsh-completions#using-zsh-frameworks)
 
 
 ### Install zsh plugin: zsh-history-substring-search
@@ -208,11 +206,37 @@ Easy install via brew: `brew install tree`
 Easy install via brew: `brew install tldr`
 
 
-## useful alias
+### lsd
+
+> The next gen ls command
+>> (Source: https://github.com/Peltoche/lsd)
+
+Easy install via brew: `brew install lsd` 
+
+
+#### Hints
+
+See the following for a font workaround:  https://github.com/Peltoche/lsd/issues/199#issuecomment-494218334
+
+Use the following in your `~/.zshrc` to always list file when stepping into new directory.
+```
+cd() {
+    builtin cd "$@"
+    l
+}
+```
+
+
+## Useful Alias
 
 A collection of different alias I'm using.
 
-- `alias del="trash"` -> just add it to your `~/.zshrc`
+Add them to your `~/.zshrc`
+
+- `alias del="trash"`
+- `alias ..="cd .."`
+- `alias ls="lsd"`
+- `alias search="l | grep"`
 - a lot of aliases which are provided by oh-my-zsh
     - `gst='git status'`
     - `ga='git add'`
