@@ -27,7 +27,7 @@ Zsh is like a superset of the standard `BASH`. It adds the following advantages:
 - path expansion (cd /v/w [tab] == cd /var/www)
 - syntax highlighting
 - spelling correction
-- ... much more useful pllugins
+- ... much more useful plugins
 - oh-my-zsh
 
 
