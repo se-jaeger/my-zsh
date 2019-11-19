@@ -130,21 +130,6 @@ plugins(
 ```
 (Source: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 
-### Install zsh plugin: zsh-completions
-
-> This projects aims at gathering/developing new completion scripts that are not available in Zsh yet. The scripts may be contributed to the Zsh project when stable enough.
->> (Source: https://github.com/zsh-users/zsh-completions)
-
-1. Run `git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions`
-2. Change your `~/.zshrc` file and add `zsh-completions` to the the plugins like:
-```
-plugins(
-  # other plugins
-  zsh-completions
-)
-```
-
-
 ### Install zsh plugin: zsh-history-substring-search
 
 > This is a clean-room implementation of the Fish shell's history search feature, where you can type in any part of any command from history and then press chosen keys, such as the UP and DOWN arrows, to cycle through matches.
