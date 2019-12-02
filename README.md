@@ -99,6 +99,22 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 
 ## 3. Install zsh plugins
 
+### Install zsh plugin: zsh-autoactivate-conda
+
+> Switches the conda environment as you move between directories.
+>> (Soruce: https://github.com/se-jaeger/zsh-autoactivate-conda) 
+
+1. Run `git clone https://github.com/se-jaeger/zsh-autoactivate-conda ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autoactivate-conda`
+2. Change your `~/.zshrc` file and add `zsh-autoactivate-conda` to the plugins like:
+```
+plugins(
+  # other plugins
+  zsh-autoactivate-conda
+)
+```
+(Source: https://github.com/se-jaeger/zsh-autoactivate-conda#installation-and-prerequisites)
+
+
 ### Install zsh plugin: zsh-autosuggestions
 
 > It suggests commands as you type, based on command history.
