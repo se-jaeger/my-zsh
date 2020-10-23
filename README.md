@@ -47,10 +47,12 @@ To activate changes you can restart iTerm2, if you did some changes on them, or 
 
 ### Zsh - Deprecated
 
-Zsh is the default shell since macOS 10.15
+Zsh is the default shell since macOS 10.15.
 
-The easiest way to install Zsh is using [brew](https://brew.sh).  
-Therefore run: `brew install zsh`
+For older versions:
+
+> The easiest way to install Zsh is using [brew](https://brew.sh).  
+> Therefore run: `brew install zsh`
 
 
 ### oh-my-zsh
