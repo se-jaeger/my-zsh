@@ -1,9 +1,9 @@
-# My personal Zsh setup with iTerm2
+# My Personal Zsh Setup with iTerm2
 
 This repository shows the setup of my terminal and some other tools/aliases. All theme and scheme files are provided in an other [repository](https://github.com/se-jaeger/hunter-zsh-scheme), have a look!  
 
 
-## Tool stack
+## Tool Stack
 
 - macOS
 - [iTerm2](https://www.iterm2.com)
@@ -40,7 +40,7 @@ It also comes with a lot of `themes` and `plugins`.
 
 
 
-## 1. Install required tools
+## 1. Install Required Tools
 
 To activate changes you can restart iTerm2, if you did some changes on them, or reload the zsh config file: `source ~/.zshrc`
 
@@ -70,7 +70,7 @@ Or use brew: `brew cask install iterm2`
 ## 2. Setup iTerm2
 
 
-### Change iTerm2 colors
+### Change iTerm2 Colors
 
 I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 
@@ -83,25 +83,25 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
     - iTerm2 -> Preferences -> tab "Profiles" -> select <your-profile-name> -> tab "Colors" -> Color Presets... -> `hunter`
 
 
-### Enable word jumps and delete wohle words in iTerm2
+### Enable Word Jumps and Delete Whole Words in iTerm2
 
 - iTerm2 -> Preferences -> tab "Profiles" -> select <your-profile-name> -> tab "Keys" -> Load Presets... -> select "Natural Text Editing"
 
 (Source: https://apple.stackexchange.com/a/293988)
 
 
-### Change iTerm2 scheme
+### Change iTerm2 Scheme
 
 - iTerm2 -> Preferences -> tab "Profiles" -> tab "Appearance" -> Theme -> slect "Dark"
 
-### Increase scroll buffer
+### Increase Scroll Buffer
 
 - iTerm2 -> Preferences -> tab "Terminal" -> tick "Unlimited scrollback"
 
 
-## 3. Install zsh plugins
+## 3. Install Zsh Plugins
 
-### Install zsh plugin: zsh-autoactivate-environment
+### Install Zsh Plugin: zsh-autoactivate-environment
 
 > Switches the virtual environment (conda and virtualenv) as you move between directories.
 >> (Soruce: https://github.com/se-jaeger/zsh-autoactivate-environment) 
@@ -117,7 +117,7 @@ plugins(
 (Source: https://github.com/se-jaeger/zsh-autoactivate-environment#installation-and-prerequisites)
 
 
-### Install zsh plugin: zsh-autosuggestions
+### Install Zsh Plugin: zsh-autosuggestions
 
 > It suggests commands as you type, based on command history.
 >> (Source: https://github.com/zsh-users/zsh-autosuggestions#zsh-autosuggestions)
@@ -133,7 +133,7 @@ plugins(
 (Source: https://github.com/zsh-users/zsh-autosuggestions#oh-my-zsh)
 
 
-### Install zsh plugin: zsh-syntax-highlighting
+### Install Zsh Plugin: zsh-syntax-highlighting
 
 > It enables highlighing of commands whilst they are typed at a zsh prompt into an interactive terminal. This helps in reviewing commands before running them, particularly in catching syntax errors.
 >> (Source: https://github.com/zsh-users/zsh-syntax-highlighting#zsh-syntax-highlighting-)
@@ -148,7 +148,7 @@ plugins(
 ```
 (Source: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 
-### Install zsh plugin: zsh-history-substring-search
+### Install Zsh Plugin: zsh-history-substring-search
 
 > This is a clean-room implementation of the Fish shell's history search feature, where you can type in any part of any command from history and then press chosen keys, such as the UP and DOWN arrows, to cycle through matches.
 >> (Source: https://github.com/zsh-users/zsh-history-substring-search#zsh-history-substring-search)
@@ -166,7 +166,7 @@ plugins(
 (Source: https://github.com/zsh-users/zsh-history-substring-search#install)
 
 
-## 4. Setup oh-my-zsh theme
+## 4. Setup oh-my-zsh Theme
 
 I created a `zsh-theme` file, which provide different features and change appearance, see [Click](https://github.com/se-jaeger/hunter-zsh-scheme).
 
@@ -178,11 +178,11 @@ I created a `zsh-theme` file, which provide different features and change appear
 
 # Screenshots
 
-![Showing features](https://raw.githubusercontent.com/se-jaeger/my-zsh/master/screenshots/hunter_screenshot.png)
+![Showing features](screenshots/hunter_screenshot.png)
 
-# Further tooling
+# Further Tooling
 
-## useful command line tools
+## Useful Command Line Tools
 
 A collection of different tools I'm using.
 
@@ -217,12 +217,65 @@ Easy install via brew: `brew install tldr`
 Easy install via brew: `brew install lsd` 
 
 
+### bat
+
+> A cat(1) clone with syntax highlighting and Git integration.
+>> (Source: https://github.com/sharkdp/bat)
+
+Easy install via brew: `brew install bat`
+
+I'm using always `bat` instead of `cat`. Simply add the following to your `~/.zshrc`: `alias cat="bat"`
+
+To use `bat` for `man` pages additionally add the following:
+```bash
+# use bat for man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_PAGER="less -R"
+```
+
+
+### fd
+
+> fd is a simple, fast and user-friendly alternative to find.
+>> (Source: https://github.com/sharkdp/fd)
+
+Easy install via brew: `brew install fd`
+
+
+### fzf
+
+> fzf is a general-purpose command-line fuzzy finder.
+>> (Source: https://github.com/junegunn/fzf)
+
+Easy install via brew:
+```bash
+brew install fzf
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+```
+
+In combination with `bat` and `fd`, `fzf` gets extraordinary useful. For this add the following to `~/.zshrc`:
+```bash
+# settings for fzf
+export FZF_DEFAULT_COMMAND="fd --type f --type l --hidden --follow"
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+export FZF_ALT_C_OPTS=" --preview 'bat --color=always {}'"
+export FZF_CTRL_T_OPTS=" --preview 'bat --color=always {}'"
+export FZF_ALT_C_COMMAND="fd --type d --type l --hidden --follow"
+```
+
+Using `fd` instead of `find` is much faster, see `fd`'s [benchmark](https://github.com/sharkdp/fd#benchmark) and `bat` instead of `cat` for previews is much nicer because of it's syntax highlighting:
+
+![fzf and bat](screenshots/fzf_bat_screenshot.png)
+
+
 #### Hints
 
 See the following for a font workaround:  https://github.com/Peltoche/lsd/issues/199#issuecomment-494218334
 
-Use the following in your `~/.zshrc` to always list file when stepping into new directory.
-```
+Use the following in your `~/.zshrc` to always show the directory's content when stepping into it.
+```bash
 cd() {
     builtin cd "$@"
     l
@@ -230,9 +283,9 @@ cd() {
 ```
 
 
-## Useful Alias
+## Useful Aliases
 
-A collection of different alias I'm using.
+A collection of aliases I'm using.
 
 Add them to your `~/.zshrc`
 
@@ -240,11 +293,13 @@ Add them to your `~/.zshrc`
 - `alias ..="cd .."`
 - `alias ls="lsd"`
 - `alias search="l | grep"`
-- a lot of aliases which are provided by oh-my-zsh
-    - `gst='git status'`
-    - `ga='git add'`
-    - `gaa='git add --all'`
-    - `gcmsg='git commit -m'`
-    - `gp='git push'`
-    - for a list of all aliases type `alias`
+- `alias cat="bat"`
 
+A lot of aliases which are provided by oh-my-zsh
+  - `gst='git status'`
+  - `ga='git add'`
+  - `gaa='git add --all'`
+  - `gcmsg='git commit -m'`
+  - `gp='git push'`
+
+For a list of all aliases type `alias`
