@@ -69,6 +69,9 @@ Or use brew: `brew cask install iterm2`
 
 ## 2. Setup iTerm2
 
+### Create personal Profile
+
+- iTerm2 -> Preferences -> tab "Profiles" -> add <your-profile-name>
 
 ### Change iTerm2 Colors
 
@@ -89,15 +92,19 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 
 (Source: https://apple.stackexchange.com/a/293988)
 
+When asked "Remove all key mappings before loading preset?" klick "Keep".
 
 ### Change iTerm2 Scheme
 
-- iTerm2 -> Preferences -> tab "Profiles" -> tab "Appearance" -> Theme -> slect "Dark"
+- iTerm2 -> Preferences -> tab "Appearance" -> Theme -> slect "Dark"
 
 ### Increase Scroll Buffer
 
-- iTerm2 -> Preferences -> tab "Terminal" -> tick "Unlimited scrollback"
+- iTerm2 -> Preferences -> tab "Profiles" -> select <your-profile-name> -> tab "Terminal" -> tick "Unlimited scrollback"
 
+### Set <your-profile-name> as Default
+
+- iTerm2 -> Preferences -> tab "Profiles" -> select <your-profile-name> -> Other Actions -> Set as Default
 
 ## 3. Install Zsh Plugins
 
@@ -109,7 +116,7 @@ I changed colors of iTerm2 and provide the changes in an `itermcolors` file.
 1. Run `git clone https://github.com/se-jaeger/zsh-autoactivate-environment ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autoactivate-environment`
 2. Change your `~/.zshrc` file and add `zsh-autoactivate-environment` to the plugins like:
 ```
-plugins(
+plugins=(
   # other plugins
   zsh-autoactivate-environment
 )
@@ -125,7 +132,7 @@ plugins(
 1. Run `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 2. Change your `~/.zshrc` file and add `zsh-autosuggestions` to the plugins like:
 ```
-plugins(
+plugins=(
   # other plugins
   zsh-autosuggestions
 )
@@ -141,7 +148,7 @@ plugins(
 1. Run `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 2. Change your `~/.zshrc` file and add `zsh-syntax-highlighting` to the the plugins like:
 ```
-plugins(
+plugins=(
   # other plugins
   zsh-syntax-highlighting
 )
@@ -289,17 +296,22 @@ A collection of aliases I'm using.
 
 Add them to your `~/.zshrc`
 
-- `alias del="trash"`
-- `alias ..="cd .."`
-- `alias ls="lsd"`
-- `alias search="l | grep"`
-- `alias cat="bat"`
+```
+alias del="trash"
+alias ..="cd .."
+alias ls="lsd"
+alias search="l | grep"
+alias cat="bat"
+```
 
 A lot of aliases which are provided by oh-my-zsh
-  - `gst='git status'`
-  - `ga='git add'`
-  - `gaa='git add --all'`
-  - `gcmsg='git commit -m'`
-  - `gp='git push'`
+
+```
+gst='git status'
+ga='git add'
+gaa='git add --all'
+gcmsg='git commit -m'
+gp='git push'
+```
 
 For a list of all aliases type `alias`
