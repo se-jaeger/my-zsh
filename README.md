@@ -1,3 +1,7 @@
+# Deprecated!
+
+This lives (partially) now here: https://github.com/se-jaeger/dotfiles
+
 # My Personal Zsh Setup with iTerm2
 
 This repository shows the setup of my terminal and some other tools/aliases. All theme and scheme files are provided in an other [repository](https://github.com/se-jaeger/hunter-zsh-scheme), have a look!  
